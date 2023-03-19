@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 100vw; /*view width */
+  height: 100vh; /*view height */
+  background: #8cc461;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  margin-left: 20px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  line-height: 47px;
+  letter-spacing: 0.2em;
+}
+.scoreboard {
+  margin-top: 40px;
+  width: 800px;
+  height: 158px;
+  left: 350px;
+  top: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comp-score {
+  position: absolute;
+  width: 139px;
+  height: 128px;
+  left: 713px;
+  top: 50px;
+  background: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+  color: #656565;
+}
+.comp-score h1 {
+  font-size: 68px;
+  color: #252525;
+}
+.user-score {
+  position: absolute;
+  width: 139px;
+  height: 128px;
+  left: 880px;
+  top: 50px;
+  background: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+  color: #656565;
+}
+.user-score h1 {
+  font-size: 68px;
+  color: #252525;
+}
+
+/* Game CSS */
+.game {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  background-image: url(./assets/t.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.game .paper {
+  margin-left: 95px;
+  margin-top: 10px;
+}
+.game img {
+  width: 110px;
+  height: 110px;
+}
+.game .hand {
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.game .hand:hover {
+  transform: translate3d(0px, -6px, 0px);
+}
+
+/* USER PICKED CSS */
+.pick {
+  width: 950px;
+  display: none;
+  margin-top: 80px;
+}
+.pick img {
+  width: 140px;
+  height: 140px;
+}
+.pick > div {
+  flex: 1;
+}
+.pick .handImage {
+  display: flex;
+  justify-content: center;
+}
+.pick h1,
+h2 {
+  color: #ffffff;
+  font-size: 17px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* DECISION YOU WIN YOU LOSE PLAY AGAIN CSS */
+.decision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.decision h1 {
+  font-size: 39px;
+  margin-top: 20px;
+  letter-spacing: 0.1em;
+}
+.decision h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+.playAgain button {
+  background-color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #6b6b6b;
+  transition: all 0.2s ease-in-out;
+  margin-left: 90px;
+  border: none;
+}

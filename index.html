@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- SCOREBOARD SECTION -->
+        <div class="scoreboard">
+            <div class="title">
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSORS</h1>
+            </div>
+            <div class="comp-score">
+                <p>COMPUTER <br>&nbsp&nbsp SCORE</p>
+                <h1>0</h1>
+            </div>
+            <div class="user-score">
+                <p>YOUR <br>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <!-- SCOREBOARD SECTION ENDS -->
+
+        <!-- ACTUAL GAME SECTION STARTS -->
+        <div class="game">
+            <div class="hand rock">
+                <img src="./assets/rock.png" alt="Rock Image" onclick="userHand('Rock')">
+            </div>
+            <div class="hand scissor">
+                <img src="./assets/scissor.png" alt="Scissor Image" onclick="userHand('Scissor')">
+            </div>
+            <div class="hand paper">
+                <img src="./assets/paper.png" alt="Paper Image" onclick="userHand('Paper')">
+            </div>
+        </div>
+        <!-- ACTUAL GAME ENDS -->
+
+        <!-- USER PICKED SECTION -->
+        <div class="pick">
+            <div class="userPick">
+                <h1>YOU PICKED</h1>
+                <div class="handImage">
+                    <img src="./assets/rock.png" id="userSelect">
+                </div>
+            </div>
+            <div class="winLose">
+                <div class="decision">
+                    <h1>YOU WIN </h1>
+                    <h2>AGAINST PC</h2>
+                </div>
+                <div class="playAgain">
+                    <button>PLAY AGAIN</button>
+                </div>
+            </div>
+            <div class="pcPick">
+                <h1>PC PICKED</h1>
+                <div class="handImage">
+                    <img id="pcSelect" src="./assets/scissor.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- USER PICKED SECTION ENDS HERE -->
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
