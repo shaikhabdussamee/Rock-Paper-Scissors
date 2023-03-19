@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- SCOREBOARD SECTION -->
+        <div class="scoreboard">
+            <div class="title">
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSORS</h1>
+            </div>
+            <div class="compscore">
+                <p>COMPUTER <br>&nbsp&nbsp SCORE</p>
+                <h1>0</h1>
+            </div>
+            <div class="userscore">
+                <p>YOUR <br>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <div class="trophy" style="display: none; align-items: center ;">
+            <img src="./assets/Group 5.png" alt="" class="star">
+            <img src="./assets/Vector.png" alt="" class="vector">
+        </div>
+        <!-- SCOREBOARD SECTION ENDS -->
+
+        <!-- ACTUAL GAME SECTION STARTS -->
+        <div class="hands">
+            <div class="hand rock">
+                <img src="./assets/rock.png" alt="Rock Image" onclick="pickUserHand('rock')">
+            </div>
+            <div class="hand scissor">
+                <img src="./assets/scissor.png" alt="Scissor Image" onclick="pickUserHand('scissor')">
+            </div>
+            <div class="hand paper">
+                <img src="./assets/paper.png" alt="Paper Image" onclick="pickUserHand('paper')">
+            </div>
+            <div class="rules">
+                <h1>Game Rules</h1><br>
+                <span>&nbsp</span>
+                <div class="yellow"></div>
+                <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p><br>
+                <p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                    paper,scissors.”</p><br><br>
+                <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p><br><br>
+                <p>If both players lay down the same hand, each player lays down another hand</p>
+            </div>
+            <div class="rbtn">
+                <button>RULES</button>
+            </div>
+
+        </div>
+        <!-- ACTUAL GAME ENDS -->
+
+        <!-- USER PICKED SECTION -->
+        <div class="contest">
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer">
+                    <img src="./assets/rock.png" id="userPickImage">
+                </div>
+            </div>
+            <div class="referee">
+                <div class="decision">
+
+                    <h1>YOU WIN </h1>
+                    <h2>AGAINST PC</h2>
+
+                </div>
+                <div class="playAgain">
+                    <button class="newGame" onclick="restartGame()" style="align-items: center;">PLAY AGAIN</button>
+                </div>
+            </div>
+            <div class="computerhand">
+                <h1>PC PICKED</h1>
+                <div class="handImageContainer">
+                    <img id="computerPickImage" src="./assets/scissor.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- USER PICKED SECTION ENDS HERE -->
+
+        <!-- HURRAY PAGE -->
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
